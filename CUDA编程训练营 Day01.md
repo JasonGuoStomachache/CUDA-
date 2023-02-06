@@ -199,7 +199,7 @@ Kernel Timeline 输出的是以gpu kernel 为单位的一段时间的运行时�
 可以结合nvvp或者nsight进行可视化分析
 https://docs.nvidia.com/cuda/profiler-users-guide/index.html#nvprof-overview
 
-![image-20230207013025684](public/image/image-20230207013025684.png)
+![image-20230207013025684](imgs/image-20230207013025684.png)
 
 `nvprof--print-gpu-trace a.exe`
 
