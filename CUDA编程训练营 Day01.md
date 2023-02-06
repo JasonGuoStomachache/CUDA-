@@ -16,7 +16,7 @@ ARM几乎都采用Linux的操作系统:X86多为window系统也可采用linux操
 
 ## Ubuntu目录结构
 
-![image-20230206213334838](public/image/image-20230206213334838.png)
+![image-20230206213334838](imgs/image-20230206213334838.png)
 
 ## Ubuntu用户权限
 
@@ -26,17 +26,17 @@ ARM几乎都采用Linux的操作系统:X86多为window系统也可采用linux操
 
 临时获取超级用户权限 `sudo + 命令`
 
-![image-20230206214059213](public/image/image-20230206214059213.png)
+![image-20230206214059213](imgs/image-20230206214059213.png)
 
 **权限修改** 
 
 字母法：`chmod (u g o a)(+ - =)(r w x) (文件名)`
 
-![image-20230206214510350](public/image/image-20230206214510350.png)
+![image-20230206214510350](imgs/image-20230206214510350.png)
 
 数字法：`chmod + 数字组合 + 文件名`
 
-![image-20230206214602769](public/image/image-20230206214602769.png)
+![image-20230206214602769](imgs/image-20230206214602769.png)
 
 
 
@@ -106,7 +106,7 @@ Linux中默认已安装SSH客户端，可直接在终端中使用SSH命令。
 
 **Makefile:**当一个工程中的源文件不计数，其按类型、功能、模块分别放在若干个目录中，makefle定义了一系列的规则，可以来指定哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译。makefile就像一个Shell脚本一样，可以实现“自动化编译”，一旦写好，只需要一个make命令，整个工程完全自动编译，极大的提高了软件开发的效率。
 
-![image-20230206222612114](public/image/image-20230206222612114.png)
+![image-20230206222612114](imgs/image-20230206222612114.png)
 
 OBJ、CC等：提前设置的替换变量，在下文中使用 $(OBJ)的形式引用
 
@@ -168,7 +168,7 @@ global函数必须具有 void 返回类型，并且不能是类的成员。
 
 **在程序中使用CUDA**
 
-![image-20230207011213045](public/image/image-20230207011213045.png)
+![image-20230207011213045](imgs/image-20230207011213045.png)
 
 ## CUDA程序编译
 
@@ -178,7 +178,7 @@ global函数必须具有 void 返回类型，并且不能是类的成员。
 
 其中GPU编译时，有一个虚拟架构的东西，要保证现实架构的版本大于虚拟架构的版本。
 
-![image-20230207012035461](public/image/image-20230207012035461.png)
+![image-20230207012035461](imgs/image-20230207012035461.png)
 
 使用nvcc编译 .cu 或 .cuh文件生成 .o 或 .exe 文件
 
@@ -205,7 +205,7 @@ https://docs.nvidia.com/cuda/profiler-users-guide/index.html#nvprof-overview
 
 查看核函数更加详细的资源使用信息，例如memory，带宽、GPU核等。
 
-![image-20230207013349851](public/image/image-20230207013349851.png)
+![image-20230207013349851](imgs/image-20230207013349851.png)
 
 `nvprof--print-api-trace a.exe`
 
@@ -230,11 +230,11 @@ Thread Grid：a collection of thread blocks 一个Grid当中的Block可以在多
 - blockDim.[x y z]表示一个block中包含多少个线程
 - gridDim.[x y z]表示一个grid中包含多少个block
 
-![image-20230207014835393](public/image/image-20230207014835393.png)
+![image-20230207014835393](imgs/image-20230207014835393.png)
 
 
 
-![image-20230207014803583](public/image/image-20230207014803583.png)
+![image-20230207014803583](imgs/image-20230207014803583.png)
 
 **CUDA的执行流程**
 
@@ -250,7 +250,7 @@ Thread Grid：a collection of thread blocks 一个Grid当中的Block可以在多
 
 **GPU 工作流程**
 
-![image-20230207020359872](public/image/image-20230207020359872.png)
+![image-20230207020359872](imgs/image-20230207020359872.png)
 
 **block中最大申请的个数**
 
@@ -260,7 +260,7 @@ threadldx.[x y z] 中 `x*y*z`三个数字的乘积不能大于1024
 
 可以采用在一个线程中嵌套循环的方式。
 
-![image-20230207021003073](public/image/image-20230207021003073.png)
+![image-20230207021003073](imgs/image-20230207021003073.png)
 
 ```c
 void __global__ add(const double *x, const double *y, double *z, int n)
