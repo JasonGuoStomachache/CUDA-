@@ -51,7 +51,7 @@ cudaFreeHost(h_arr);
 cudaStreamDestroy(stream)
 ```
 
-![image-20230210020146886](/image-20230210020146886.png)
+![image-20230210020146886](imgs/image-20230210020146886.png)
 
 ## 作业
 
